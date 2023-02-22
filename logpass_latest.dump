@@ -1,0 +1,74 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 15.1
+-- Dumped by pg_dump version 15.1
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: password; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.password (
+    column_1 integer NOT NULL,
+    password text,
+    username text
+);
+
+
+ALTER TABLE public.password OWNER TO postgres;
+
+--
+-- Name: username; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.username (
+);
+
+
+ALTER TABLE public.username OWNER TO postgres;
+
+--
+-- Data for Name: password; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.password (column_1, password, username) FROM stdin;
+1	bf9e0d618849c4f83cc7f1a3ded62d7cfb262cf8fc11604e280400738af6923	Almas
+\.
+
+
+--
+-- Data for Name: username; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.username  FROM stdin;
+\.
+
+
+--
+-- Name: password password_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.password
+    ADD CONSTRAINT password_pk PRIMARY KEY (column_1);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
